@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author M.Yoneyama
  * @version 2.0
  */
-@WebServlet(urlPatterns={"index.jsp","*.do"}) // 「.do」が付くすべてのリクエストを受け付ける
+@WebServlet("*.do") // 「.do」が付くすべてのリクエストを受け付ける
 public class FrontControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     
@@ -30,7 +30,6 @@ public class FrontControllerServlet extends HttpServlet {
 	 * @throws IOException
 	 */
 	protected void doService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-				
 		// リクエストURLから適切なActionオブジェクト(ビジネス・ロジックの実行をカプセル化するオブジェクト)を取得
 		Action action = ActionFactory.getAction(request.getServletPath());
 		// Actionを実行して、転送先Viewのパスを取得
