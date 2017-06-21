@@ -8,9 +8,11 @@
 	
 	<h3>Login Management System</h3>
 	
+	<!-- 
 	<jsp:include page="html-header.jsp">
 		<jsp:param name="title" value="Login" />
 	</jsp:include>
+	-->
 	
 	<body>
 		<div class="login-panel">
@@ -31,7 +33,9 @@
 			
 			<p class="error">${error}</p>
 			
+			<!-- 
 			<jsp:include page="page-footer.jsp"></jsp:include>
+			-->
 			
 		</div>
 		
