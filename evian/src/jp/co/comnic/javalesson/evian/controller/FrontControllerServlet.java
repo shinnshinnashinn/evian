@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
  * @author M.Yoneyama
  * @version 2.0
  */
-@WebServlet("*.do") // 「.do」が付くすべてのリクエストを受け付ける
+@WebServlet(urlPatterns={"index.jsp","*.do"}) // 「.do」が付くすべてのリクエストを受け付ける
 public class FrontControllerServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     

@@ -37,7 +37,11 @@ public class ActionFactory implements ServletContextListener {
 		
 		try {
 			// 取得したActionの実装クラス名からインスタンスを生成
-			action = (Action)Class.forName(actionClassName).newInstance();
+			if("index.jsp".equals(actionClassName)){
+				action = new LoginAction();
+			} else {
+				action = (Action)Class.forName(actionClassName).newInstance();
+			}
 		} catch (Exception e) {
 			throw new ServletException(e);
 		}
