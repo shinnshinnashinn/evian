@@ -1,4 +1,4 @@
-package jp.co.comnic.javalesson.webapp.evian.controller;
+package jp.co.comnic.javalesson.evian.controller;
 
 import java.io.IOException;
 
@@ -6,9 +6,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import jp.co.comnic.javalesson.webapp.evian.entity.Account;
-import jp.co.comnic.javalesson.webapp.evian.dao.AccountDao;
-import jp.co.comnic.javalesson.webapp.evian.dao.DaoException;
+import jp.co.comnic.javalesson.evian.entity.Account;
+import jp.co.comnic.javalesson.evian.dao.AccountDao;
+import jp.co.comnic.javalesson.evian.dao.DaoException;
 
 /**
  * <p>ログイン認証処理を実行するActionインターフェイスの実装。</p>
@@ -19,7 +19,7 @@ import jp.co.comnic.javalesson.webapp.evian.dao.DaoException;
 public class LoginAction implements Action {
 
 	/* (non-Javadoc)
-	 * @see jp.co.comnic.javalesson.webapp.ems.controller.Action#execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
+	 * @see jp.co.comnic.javalesson.ems.controller.Action#execute(javax.servlet.http.HttpServletRequest, javax.servlet.http.HttpServletResponse)
 	 */
 	@Override
 	public String execute(HttpServletRequest request, HttpServletResponse response)

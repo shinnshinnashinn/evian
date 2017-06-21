@@ -1,4 +1,4 @@
-package jp.co.comnic.javalesson.webapp.evian.dao;
+package jp.co.comnic.javalesson.evian.dao;
 
 import java.util.List;
 
@@ -6,7 +6,7 @@ import javax.persistence.NoResultException;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 
-import jp.co.comnic.javalesson.webapp.evian.entity.Account;
+import jp.co.comnic.javalesson.evian.entity.Account;
 
 /**
  * <p>アカウント･テーブルのCRUD操作を実装するDAOクラス</p>

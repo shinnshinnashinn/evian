@@ -1,4 +1,4 @@
-package jp.co.comnic.javalesson.webapp.evian.controller;
+package jp.co.comnic.javalesson.evian.controller;
 
 import java.io.IOException;
 
