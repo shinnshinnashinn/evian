@@ -14,12 +14,12 @@
     <!-- Settings for actions (*.do) -->    
     <context-param>
         <param-name>/login.do</param-name>
-        <param-value>jp.co.comnic.javalesson.webapp.evian.controller.LoginAction</param-value>
+        <param-value>jp.co.comnic.javalesson.evian.controller.LoginAction</param-value>
     </context-param>
     
     <context-param>
         <param-name>/logout.do</param-name>
-        <param-value>jp.co.comnic.javalesson.webapp.evian.controller.LogoutAction</param-value>
+        <param-value>jp.co.comnic.javalesson.evian.controller.LogoutAction</param-value>
     </context-param>
     
     <!-- Settings for JSP pages --> 
