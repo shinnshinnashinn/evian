@@ -43,6 +43,7 @@ public class LoginAction implements Action {
 				
 				// トップページにリダイレクト
 				response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/");
+//				response.sendRedirect("/evian/top.jsp");
 				// リダイレクト後はforwardができないため、forward先パスはnullをセット
 				forwardPath = null;
 				

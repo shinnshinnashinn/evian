@@ -51,6 +51,10 @@ public class BaseDao {
 	public <T> T findByEmail(Class<T> entityClass, Serializable email) {
 		return em.find(entityClass, email);
 	}
+	
+//	public <T> T findByIsbn(Class<T> entityClass, Serializable id) {
+//		return em.find(entityClass, id);
+//	}
 		
 	/**
 	 * <p>新規レコードの挿入</p>

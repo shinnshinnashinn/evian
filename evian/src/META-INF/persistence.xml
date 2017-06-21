@@ -11,5 +11,9 @@
 	<class>jp.co.comnic.javalesson.evian.entity.OrderDetail</class>
 	<class>jp.co.comnic.javalesson.evian.entity.OrderDetailPK</class>
 	<class>jp.co.comnic.javalesson.evian.entity.Publisher</class>
+	<!-- <class>jp.co.comnic.javalesson.evian.entity.BookAuthor</class>
+	<class>jp.co.comnic.javalesson.evian.entity.BookAuthorPK</class>
+	<class>jp.co.comnic.javalesson.evian.entity.Cart</class>
+	<class>jp.co.comnic.javalesson.evian.entity.CartPK</class> -->
 	</persistence-unit>
 </persistence>
