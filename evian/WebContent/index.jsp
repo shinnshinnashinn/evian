@@ -4,10 +4,10 @@
 <html>
 		<h1>Menu</h1>
 		
-		<div id="menu-panel">
+		<div>
 			<ul>
-				<li><a href="employees/">Employees</a></li>
-				<li><a href="departments/">Departments</a></li>
+				<li><a>Employees</a></li>
+				<li><a>Departments</a></li>
 			</ul>
 		</div>
 	</body>

@@ -8,9 +8,8 @@
 	
 	<h3>Login Management System</h3>
 	
-	
 	<body>
-		<div class="login-panel">
+		<div>
 			<h1>Login</h1>
 			<form action="login.do" method="post">
 				<fieldset>
@@ -25,9 +24,6 @@
 					<input type="submit" value="Login">
 				</fieldset>
 			</form>
-			
-			<p class="error">${error}</p>
-			
 			
 		</div>
 		
