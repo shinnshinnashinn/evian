@@ -11,6 +11,11 @@
     <param-value>jp.co.comnic.javalesson.evian.controller.LogoutAction</param-value>
   </context-param>
   
+  <context-param>
+    <param-name>/search.do</param-name>
+    <param-value>jp.co.comnic.javalesson.evian.controller.SearchAction</param-value>
+  </context-param>
+  
   
   
   <servlet>

@@ -9,7 +9,7 @@
      </head>
      <body>
 		<h1>トップ画面</h1>
-		    <form action="/ControllerServlet" method="post">
+		    <form action="/search.do" method="post">
      		<input name="word">
      		<input type="submit" value="Serch">
      	</form>
