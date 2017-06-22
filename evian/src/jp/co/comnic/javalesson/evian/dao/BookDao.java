@@ -21,19 +21,19 @@ public class BookDao extends BaseDao{
 		return super.findByEmail(Book.class, isbn);
 	}
 	
-	public Book loginAuthenticate(String email, String password)  {
+	public List<Book> findByTitle(String title)  {
 
-		Book Book = null;
+		title = '%' + title + '%';
+		List<Book> Book = null;
 		
 		try {
 			// Criteria APIを使用して以下SQLを生成する
 			// SELECT * FROM Book WHERE email = [email] AND password = [password]
 			query.select(root)
-				 .where(builder.equal(root.get("email"), email), 
-						builder.equal(root.get("password"), password));
+				 .where(builder.like(root.get("title"), title));
 			
-			// SQLを実行して結果を単一のエンティティ・オブジェクトとして取得
-			Book = em.createQuery(query).getSingleResult();
+			// SQLを実行して結果を複数のエンティティ・オブジェクトとして取得
+			Book = em.createQuery(query).getResultList();
 			
 		} catch (NoResultException e) {
 			// getSingleResultメソッドは結果がなかった場合にNoResultExceptionをthrow

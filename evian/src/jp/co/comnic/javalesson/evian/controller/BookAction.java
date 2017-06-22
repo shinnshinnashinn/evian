@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import jp.co.comnic.javalesson.evian.controller.ControllerUtils;
-import jp.co.comnic.javalesson.evian.dao.BaseDao;
+import jp.co.comnic.javalesson.evian.dao.BookDao;
 import jp.co.comnic.javalesson.evian.dao.DaoException;
 
 public class BookAction implements Action{
@@ -16,25 +16,18 @@ public class BookAction implements Action{
 	public String execute(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		String servletPath = request.getServletPath();
+//		String servletPath = request.getServletPath();
+		String word = request.getParameter("word");
 		
-		String redirectPath = "./"; // 正常処理のリダイレクト先（一覧画面）
-		String forwardPath = "new"; // 例外発生時のフォワード先（元の登録画面）
+//		String redirectPath = "./"; // 正常処理のリダイレクト先（一覧画面）
+		String forwardPath = "serchresult"; // 例外発生時のフォワード先（元の登録画面）
 		
 		try {
 			
-			// リクエスト・パス文字列から空のエンティティ・オブジェクトを生成
-			Object entity = Class.forName(ControllerUtils.getFullyQualifiedClassName(servletPath)).newInstance();
+			request.setAttribute("bookList", new BookDao().findByTitle(word));
 			
-			// リクエスト・パラメータの値を使用してエンティティ・オブジェクトのフィールド値を設定
-			ControllerUtils.populateEntity(request, entity);
-			
-			// エンティティ・オブジェクトをDAOに渡すことで新規レコードをDBに挿入
-			new BaseDao().insert(entity);
-			
+			response.sendRedirect(forwardPath); 
 			forwardPath = null;
-			response.sendRedirect(redirectPath); 
-			
 		} catch (DaoException e) {
 			request.setAttribute("error", "[ERROR]: " + 
 			                      ControllerUtils.getShortMessage(e));
