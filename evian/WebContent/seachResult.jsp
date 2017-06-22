@@ -20,21 +20,21 @@
                 <th>pages</th>
                 <th>description</th>
                 <th>formats</th>
-                <th>category_id</th>
-                <th>publisher_id</th>
+                <th>category</th>
+                <th>publisher</th>
                 <th>early_release</th>
             </tr>
             <c:forEach var="book" items="${bookList}">
                 <tr>
                     <td>${book.isbn}</td>
                     <td>${book.title}</td>
-                    <td>${book.final_release_date}</td>
+                    <td>${book.finalReleaseDate}</td>
                     <td>${book.pages}</td>
                     <td>${book.description}</td>
                     <td>${book.formats}</td>
-                    <td>${book.category_id}</td>
-                    <td>${book.publisher_id}</td>
-                    <td>${book.early_release}</td>
+                    <td>${book.category.name}</td>
+                    <td>${book.publisher.name}</td>
+                    <td>${book.earlyRelease}</td>
                 </tr>
             </c:forEach>
         </table>

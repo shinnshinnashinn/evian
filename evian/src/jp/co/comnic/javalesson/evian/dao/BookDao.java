@@ -35,6 +35,10 @@ public class BookDao extends BaseDao{
 			// SQLを実行して結果を複数のエンティティ・オブジェクトとして取得
 			Book = em.createQuery(query).getResultList();
 			
+//			for(int i = 0; i < Book.size(); i++){
+//				System.out.println(Book.get(i).toString());
+//			}
+			
 		} catch (NoResultException e) {
 			// getSingleResultメソッドは結果がなかった場合にNoResultExceptionをthrow
 			// するため、この例外処理は不要

@@ -9,9 +9,9 @@
      </head>
      <body>
 		<h1>トップ画面</h1>
-		    <form action="/search.do" method="post">
+		    <form action="search.do" method="post">
      		<input name="word">
-     		<input type="submit" value="Serch">
+     		<input type="submit" value="Search">
      	</form>
      </body>
 </html>

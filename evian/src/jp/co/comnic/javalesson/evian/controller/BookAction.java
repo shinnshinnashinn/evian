@@ -20,13 +20,14 @@ public class BookAction implements Action{
 		String word = request.getParameter("word");
 		
 //		String redirectPath = "./"; // 正常処理のリダイレクト先（一覧画面）
-		String forwardPath = "serchresult"; // 例外発生時のフォワード先（元の登録画面）
+		String forwardPath = "searchresult"; // 例外発生時のフォワード先（元の登録画面）
 		
 		try {
 			
 			request.setAttribute("bookList", new BookDao().findByTitle(word));
 			
-			response.sendRedirect(forwardPath); 
+//			response.sendRedirect(forwardPath); 
+			response.sendRedirect("/" + request.getServletContext().getServletContextName() + "/searchResult.jsp");
 			forwardPath = null;
 		} catch (DaoException e) {
 			request.setAttribute("error", "[ERROR]: " + 
