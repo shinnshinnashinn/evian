@@ -45,28 +45,28 @@ public class Book implements Serializable {
 
 	//bi-directional many-to-many association to Author
 	@ManyToMany
-	@JoinTable(
-		name="BOOK_AUTHOR"
-		, joinColumns={
-			@JoinColumn(name="isbn")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="author_id")
-			}
-		)
+//	@JoinTable(
+//		name="BOOK_AUTHOR"
+//		, joinColumns={
+//			@JoinColumn(name="isbn")
+//			}
+//		, inverseJoinColumns={
+//			@JoinColumn(name="author_id")
+//			}
+//		)
 	private List<Author> authors;
 
 	//bi-directional many-to-many association to Account
 	@ManyToMany
-	@JoinTable(
-		name="CART"
-		, joinColumns={
-			@JoinColumn(name="isbn")
-			}
-		, inverseJoinColumns={
-			@JoinColumn(name="email")
-			}
-		)
+//	@JoinTable(
+//		name="CART"
+//		, joinColumns={
+//			@JoinColumn(name="isbn")
+//			}
+//		, inverseJoinColumns={
+//			@JoinColumn(name="email")
+//			}
+//		)
 	private List<Account> accounts;
 
 	//bi-directional many-to-one association to OrderDetail

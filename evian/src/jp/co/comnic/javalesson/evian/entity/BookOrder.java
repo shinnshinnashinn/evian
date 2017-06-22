@@ -26,7 +26,7 @@ public class BookOrder implements Serializable {
 
 	//bi-directional many-to-one association to Account
 	@ManyToOne
-	@JoinColumn(name="email")
+	@JoinColumn(name="email", updatable=false, insertable=false)
 	private Account account;
 
 	//bi-directional many-to-one association to OrderDetail

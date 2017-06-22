@@ -47,7 +47,6 @@ public class BaseDao {
 		return em.find(entityClass, id);
 	}
 	
-	
 	public <T> T findByEmail(Class<T> entityClass, Serializable email) {
 		return em.find(entityClass, email);
 	}
